@@ -91,3 +91,13 @@ def interactions_to_df(
     ]
 
     return pd.DataFrame(rows)
+
+
+def products_df(products: List[Dict[str, Any]]) -> pd.DataFrame:
+    """Backward-compatible alias for products_to_df."""
+    return products_to_df(products)
+
+
+def interaction_df(reviews: List[Dict[str, Any]], orders: List[Dict[str, Any]]) -> pd.DataFrame:
+    """Backward-compatible alias for interactions_to_df."""
+    return interactions_to_df(reviews, orders)

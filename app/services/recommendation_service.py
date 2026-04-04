@@ -2,16 +2,17 @@
 
 from __future__ import annotations
 
+from collections import defaultdict
 from typing import Any, Dict
 
 import numpy as np
 import pandas as pd
 from fastapi import HTTPException
-from sklearn.feature_extraction.text import TfidfVectorizer, defaultdict, defaultdict
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 from app.core.schemas import MLRequest
-from app.services.data_prep_service import interaction_df, products_df
+from app.services.data_prep_service import interactions_to_df, products_to_df
 from app.utils.normalizers import to_id
 
 
@@ -57,7 +58,7 @@ Content-based filtering
 """
 def content_based_recommendation(request:MLRequest) ->Dict[str, Any]:
     # Chuyển đổi danh sách sản phẩm thành một DataFrame của pandas, bao gồm các trường như product_id, name, price, average_rating, total_reviews, sold_count, stock, image_count, has_3d và corpus.
-    p_df = products_df(request.products)
+    p_df = products_to_df(request.products)
     if p_df.empty:
         return {"recommendations": [], "model": "content-based"}
     
@@ -106,7 +107,7 @@ def content_based_recommendation(request:MLRequest) ->Dict[str, Any]:
     
     # Recommendation theo User (target_user_id)
     # Dựa theo Review + Order -> interaction -> user profile -> similarity -> recommendation
-    interactions = interaction_df(request.reviews, request.orders)
+    interactions = interactions_to_df(request.reviews, request.orders)
     if(interactions.empty or not request.target_user_id):
         # Fallback: xep theo sold_count + average_rating nếu không có dữ liệu tương tác hoặc không có target_user_id
         # Đề xuất dựa trên số lựa đã bán và đánh giá trung bình của sản phẩm
@@ -122,7 +123,7 @@ def content_based_recommendation(request:MLRequest) ->Dict[str, Any]:
     user_indices = [idx_by_product[p] for p in user_items if p in idx_by_product]
     if not user_indices:
         # Fallback: xep theo sold_count + average_rating
-        return {"recommendations": [], "model": "content-based"}
+        return _build_popularity_fallback(p_df, request.top_k, "content-based")
     
     # Tính điểm similarity trung bình giữa các sản phẩm mà user đã tương tác và tất cả các sản phẩm khác 
     # Tạo ra một Profile đại diện cho sở thích của User 
@@ -159,7 +160,7 @@ Collaborative filtering
         - xep theo sold_count + average_rating
 """
 def collaborative_recommendation(request:MLRequest) ->Dict[str, Any]:
-    interactions = interaction_df(request.reviews, request.orders)
+    interactions = interactions_to_df(request.reviews, request.orders)
     if interactions.empty:
         return {"recommendations": [], "model": "collaborative"}
     
@@ -218,7 +219,7 @@ Hybrid recommendation
 def hybrid_recommendation(request:MLRequest) ->Dict[str, Any]:
     # Lấy kết quả từ 2 model: Content-based và Collaborative filtering
     content = content_based_recommendation(request).get("recommendations", [])
-    collaborative = collaborative_filtering_recommendation(request).get("recommendations", [])
+    collaborative = collaborative_recommendation(request).get("recommendations", [])
 
     score_map: Dict[str, float] = defaultdict(float)
 

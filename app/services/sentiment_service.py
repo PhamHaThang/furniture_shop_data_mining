@@ -85,3 +85,8 @@ def sentiment_analysis(reviews: List[Dict[str, Any]]) -> Dict[str, Any]:
         },
         "reviews": labelled_comments,
     }
+
+
+def run_sentiment_analysis(reviews: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Backward-compatible alias for sentiment_analysis."""
+    return sentiment_analysis(reviews)

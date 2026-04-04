@@ -8,7 +8,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
 from app.core.schemas import MLRequest
-from app.services.data_prep_service import products_df
+from app.services.data_prep_service import products_to_df
 from app.utils.normalizers import to_id
 
 
@@ -23,7 +23,7 @@ def kmeans_clustering(request:MLRequest, cluster_type: str = "products") ->Dict[
     if cluster_type == "products":
         # cluster_type == "products"
         # Chuẩn bị dữ liệu sản phẩm
-        df = products_df(request.products)
+        df = products_to_df(request.products)
         if df.empty:
            return {"cluster_type": "products", "clusters": []}
         
