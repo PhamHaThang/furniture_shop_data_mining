@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
-from typing import Any, Dict
+from typing import Any, Dict, List
 
 import pandas as pd
 from sklearn.cluster import KMeans
@@ -10,7 +10,202 @@ from sklearn.preprocessing import StandardScaler
 from app.core.schemas import MLRequest
 from app.services.data_prep_service import products_to_df
 from app.utils.normalizers import to_id
+from app.core.cluster_label_config import (
+    PRODUCT_DEFAULT_LABEL,
+    PRODUCT_DEFAULT_SUFFIX,
+    PRODUCT_LABEL_RULES,
+    PRODUCT_SUFFIX_RULES,
+    USER_DEFAULT_LABEL,
+    USER_DEFAULT_SUFFIX,
+    USER_LABEL_RULES,
+    USER_SUFFIX_RULES,
+)
+def _safe_quantile(df: pd.DataFrame, col: str, q: float, default: float = 0.0) -> float:
+    if col not in df.columns or df.empty:
+        return default
+    value = df[col].quantile(q)
+    if pd.isna(value):
+        return default
+    return float(value)
 
+
+def _compare(left: float, op: str, right: float) -> bool:
+    if op == ">=":
+        return left >= right
+    if op == "<=":
+        return left <= right
+    if op == ">":
+        return left > right
+    if op == "<":
+        return left < right
+    if op == "==":
+        return left == right
+    return False
+
+
+def _conditions_match(
+    cluster_stats: Dict[str, float],
+    thresholds: Dict[str, float],
+    conditions: List[tuple],
+) -> bool:
+    for feature_name, operator, threshold_key in conditions:
+        left = float(cluster_stats.get(feature_name, 0.0))
+        right = float(thresholds.get(threshold_key, 0.0))
+        if not _compare(left, operator, right):
+            return False
+    return True
+
+
+def _pick_label_from_rules(
+    cluster_stats: Dict[str, float],
+    thresholds: Dict[str, float],
+    rules: List[Dict[str, Any]],
+    default_label: str,
+) -> str:
+    for rule in rules:
+        conditions = rule.get("all", [])
+        if _conditions_match(cluster_stats, thresholds, conditions):
+            return str(rule.get("label") or default_label)
+    return default_label
+
+
+def _pick_suffix_from_rules(
+    cluster_stats: Dict[str, float],
+    thresholds: Dict[str, float],
+    rules: List[Dict[str, Any]],
+    default_suffix: str,
+) -> str:
+    for rule in rules:
+        conditions = rule.get("all", [])
+        if _conditions_match(cluster_stats, thresholds, conditions):
+            return str(rule.get("suffix") or default_suffix)
+    return default_suffix
+
+
+def _label_product_cluster(cluster_stats: Dict[str, float], thresholds: Dict[str, float]) -> str:
+    return _pick_label_from_rules(
+        cluster_stats,
+        thresholds,
+        PRODUCT_LABEL_RULES,
+        PRODUCT_DEFAULT_LABEL,
+    )
+
+
+def _label_user_cluster(cluster_stats: Dict[str, float], thresholds: Dict[str, float]) -> str:
+    return _pick_label_from_rules(
+        cluster_stats,
+        thresholds,
+        USER_LABEL_RULES,
+        USER_DEFAULT_LABEL,
+    )
+
+
+def _product_label_suffix(cluster_stats: Dict[str, float], thresholds: Dict[str, float]) -> str:
+    return _pick_suffix_from_rules(
+        cluster_stats,
+        thresholds,
+        PRODUCT_SUFFIX_RULES,
+        PRODUCT_DEFAULT_SUFFIX,
+    )
+
+
+def _user_label_suffix(cluster_stats: Dict[str, float], thresholds: Dict[str, float]) -> str:
+    return _pick_suffix_from_rules(
+        cluster_stats,
+        thresholds,
+        USER_SUFFIX_RULES,
+        USER_DEFAULT_SUFFIX,
+    )
+
+
+def _make_cluster_labels_unique(
+    summaries: Dict[int, Dict[str, Any]],
+    cluster_type: str,
+    thresholds: Dict[str, float],
+) -> None:
+    label_to_clusters: Dict[str, List[int]] = defaultdict(list)
+    for cluster_id, summary in summaries.items():
+        label_to_clusters[summary.get("label", "")].append(cluster_id)
+
+    for label, cluster_ids in label_to_clusters.items():
+        if len(cluster_ids) <= 1:
+            continue
+
+        for cluster_id in cluster_ids:
+            stats = summaries[cluster_id].get("avg_features", {})
+            suffix = (
+                _product_label_suffix(stats, thresholds)
+                if cluster_type == "products"
+                else _user_label_suffix(stats, thresholds)
+            )
+            summaries[cluster_id]["label"] = f"{label} - {suffix}"
+
+    # Nếu vẫn trùng sau khi thêm suffix thì thêm số thứ tự để đảm bảo unique tuyệt đối.
+    seen_counts: Dict[str, int] = defaultdict(int)
+    for cluster_id in sorted(summaries.keys()):
+        label = summaries[cluster_id].get("label", "")
+        seen_counts[label] += 1
+        if seen_counts[label] > 1:
+            summaries[cluster_id]["label"] = f"{label} #{seen_counts[label]}"
+
+
+def _build_cluster_summaries(
+    df: pd.DataFrame,
+    cluster_labels: List[int],
+    feature_cols: List[str],
+    cluster_type: str,
+) -> Dict[int, Dict[str, Any]]:
+    cluster_df = df.copy()
+    cluster_df["cluster"] = cluster_labels
+
+    thresholds = {}
+    if cluster_type == "products":
+        thresholds = {
+            "price_p25": _safe_quantile(df, "price", 0.25),
+            "price_p75": _safe_quantile(df, "price", 0.75),
+            "rating_p75": _safe_quantile(df, "average_rating", 0.75),
+            "sold_p25": _safe_quantile(df, "sold_count", 0.25),
+            "sold_p50": _safe_quantile(df, "sold_count", 0.5),
+            "sold_p75": _safe_quantile(df, "sold_count", 0.75),
+            "reviews_p75": _safe_quantile(df, "total_reviews", 0.75),
+            "stock_p75": _safe_quantile(df, "stock", 0.75),
+        }
+    else:
+        thresholds = {
+            "spent_p75": _safe_quantile(df, "total_spent", 0.75),
+            "orders_p50": _safe_quantile(df, "total_orders", 0.5),
+            "orders_p75": _safe_quantile(df, "total_orders", 0.75),
+            "avg_order_p50": _safe_quantile(df, "avg_order_value", 0.5),
+            "avg_order_p75": _safe_quantile(df, "avg_order_value", 0.75),
+            "reviews_p75": _safe_quantile(df, "total_reviews", 0.75),
+        }
+
+    summaries: Dict[int, Dict[str, Any]] = {}
+    grouped = cluster_df.groupby("cluster")
+
+    for cluster_id, cluster_rows in grouped:
+        means = {
+            col: float(cluster_rows[col].mean())
+            for col in feature_cols
+            if col in cluster_rows.columns
+        }
+
+        label = (
+            _label_product_cluster(means, thresholds)
+            if cluster_type == "products"
+            else _label_user_cluster(means, thresholds)
+        )
+
+        summaries[int(cluster_id)] = {
+            "cluster": int(cluster_id),
+            "label": label,
+            "size": int(len(cluster_rows)),
+            "avg_features": means,
+        }
+
+    _make_cluster_labels_unique(summaries, cluster_type, thresholds)
+
+    return summaries
 
 """"
 K-Means Clustering
@@ -105,14 +300,22 @@ def kmeans_clustering(request:MLRequest, cluster_type: str = "products") ->Dict[
     # Áp dụng K-Means để phân cụm
     model = KMeans(n_clusters=n_clusters, random_state=42, n_init=20)
     cluster_labels = model.fit_predict(x_scaled)
-
+    cluster_summaries = _build_cluster_summaries(
+        df=df,
+        cluster_labels=cluster_labels,
+        feature_cols=feature_cols,
+        cluster_type=cluster_type,
+    )
     result = []
     for idx, row in df.iterrows():
+        cluster_id = int(cluster_labels[idx])
+        cluster_info = cluster_summaries.get(cluster_id, {})
         result.append(
             {
                 "id": row[labels_key],
                 "name": row[names_key],
-                "cluster": int(cluster_labels[idx]),
+                "cluster": cluster_id,
+                "cluster_label": cluster_info.get("label", ""),
                 "features": {col: float(row[col]) for col in feature_cols},
             }
         )
@@ -120,5 +323,9 @@ def kmeans_clustering(request:MLRequest, cluster_type: str = "products") ->Dict[
     return {
         "cluster_type": cluster_type,
         "cluster_count": int(n_clusters),
+        "cluster_summaries": sorted(
+            cluster_summaries.values(),
+            key=lambda item: item["cluster"],
+        ),
         "clusters": result,
     }
