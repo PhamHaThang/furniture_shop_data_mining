@@ -1,0 +1,10 @@
+_id,name,description,parentCategory,createdAt,updatedAt,slug,__v,image
+69328dd8ed938f60e00a086c,Phòng khách,Nội thất sang trọng cho phòng khách,,2025-12-05T07:46:32.161Z,2025-12-05T07:46:32.161Z,phong-khach,0,https://res.cloudinary.com/drgho551x/image/upload/v1765035055/living_xhnrjj.jpg
+69328eb5ed938f60e00a0879,Phòng ngủ,Không gian ấm cúng cho giấc ngủ,,2025-12-05T07:50:13.855Z,2025-12-05T07:50:13.855Z,phong-ngu,0,https://res.cloudinary.com/drgho551x/image/upload/v1765035054/bedroom_fef1kq.jpg
+69328ef0ed938f60e00a087f,Phòng bếp,Tiện nghi cho gian bếp hiện đại,,2025-12-05T07:51:12.219Z,2025-12-05T07:51:12.219Z,phong-bep,0,https://res.cloudinary.com/drgho551x/image/upload/v1765035055/kitchen_aynmkl.jpg
+69328effed938f60e00a0885,Văn phòng,Bàn ghế làm việc chuyên nghiệp,,2025-12-05T07:51:27.950Z,2025-12-05T07:51:27.950Z,van-phong,0,https://res.cloudinary.com/drgho551x/image/upload/v1765035055/office_mofztf.jpg
+693296dbba0c79a52537afd1,Sofa,Các loại ghế Sofa cao cấp,69328dd8ed938f60e00a086c,2025-12-05T08:24:59.874Z,2025-12-05T08:24:59.874Z,sofa,0,https://res.cloudinary.com/drgho551x/image/upload/v1764945194/furniture-shop/images/thir6c7dvatimkqnijlx.jpg
+693296f6ba0c79a52537afd9,Bàn trà,"Bàn trà, bàn cafe",69328dd8ed938f60e00a086c,2025-12-05T08:25:26.557Z,2025-12-05T08:25:26.557Z,ban-tra,0,https://res.cloudinary.com/drgho551x/image/upload/v1765003147/furniture-shop/images/tc8rdxaov9yeymoeekwz.jpg
+69329715ba0c79a52537afe1,Giường ngủ,Giường ngủ các loại,69328eb5ed938f60e00a0879,2025-12-05T08:25:57.842Z,2025-12-05T08:25:57.842Z,giuong-ngu,0,https://res.cloudinary.com/drgho551x/image/upload/v1765004011/furniture-shop/images/xnjqsdkj69vdq6x1kvnm.jpg
+69329745ba0c79a52537afe9,Bộ bàn ăn,Bộ bàn ghế ăn gia đình,69328ef0ed938f60e00a087f,2025-12-05T08:26:45.086Z,2025-12-21T14:14:41.881Z,bo-ban-an,0,https://res.cloudinary.com/drgho551x/image/upload/v1765005255/furniture-shop/images/rwh9exvb3d9tcxu5fzez.jpg
+694b5974a2fa3f24b36679e2,Ghế văn phòng,Các loại ghế dành cho văn phòng,69328effed938f60e00a0885,2025-12-24T03:09:40.588Z,2025-12-24T03:16:36.489Z,ghe-van-phong,0,https://res.cloudinary.com/dw8ek1lok/image/upload/v1766387049/xav2hemslhat2tg3mc0g.png

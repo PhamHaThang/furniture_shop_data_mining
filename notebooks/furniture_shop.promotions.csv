@@ -1,0 +1,4 @@
+_id,code,description,discountType,discountValue,startDate,endDate,minSpend,isActive,createdAt,updatedAt,__v
+6932a931d502d2f1a5bb0ae1,WELCOME,Giảm 100k cho đơn hàng tối thiểu 500k,fixed,100000,2025-12-05T00:00:00.000Z,2026-12-10T00:00:00.000Z,500000,true,2025-12-05T09:43:13.045Z,2025-12-21T01:21:48.112Z,0
+6932a9a9d502d2f1a5bb0ae6,SUMMER10,Giảm 10% cho đơn hàng tối thiểu 1 triệu,percentage,10,2025-12-05T00:00:00.000Z,2026-12-10T00:00:00.000Z,1000000,true,2025-12-05T09:45:13.127Z,2026-04-05T07:24:04.810Z,0
+69474b22ddae8440bc643d88,DISCOUNT20%,Giảm 20% cho đơn hàng tối thiểu 5 triệu,percentage,20,2025-12-21T00:00:00.000Z,2026-01-17T00:00:00.000Z,5000000,true,2025-12-21T01:19:30.852Z,2025-12-21T05:58:17.595Z,0

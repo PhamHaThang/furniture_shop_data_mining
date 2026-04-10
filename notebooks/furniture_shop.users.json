@@ -1,0 +1,141 @@
+[{
+  "_id": {
+    "$oid": "69291fc073215e923c2a7d9c"
+  },
+  "email": "admin@gmail.com",
+  "password": "$2b$10$AgCTD6in4E8NMkwepVGSkOExZJ9HCAO6QKBwayfXs3V9MMnIb0p0i",
+  "fullName": "Admin",
+  "address": [
+    {
+      "fullName": "Nhà riêng",
+      "phone": "0901234567",
+      "province": "123 Đường Nguyễn Trãi",
+      "district": "Hà Nội",
+      "ward": "Vietnam",
+      "address": "Vietnam",
+      "isDefault": true,
+      "_id": {
+        "$oid": "693504e9ab69ffb7bb3c3edd"
+      }
+    }
+  ],
+  "avatar": "https://res.cloudinary.com/drgho551x/image/upload/v1766548161/furniture-shop/images/atc3w5p9pmhz4lgve5iv.jpg",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2025-11-28T04:06:24.996Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-24T03:49:23.583Z"
+  },
+  "__v": 4,
+  "phone": "0376335815",
+  "isDeleted": false,
+  "resetPasswordExpire": {
+    "$date": "2025-12-19T02:39:37.809Z"
+  },
+  "resetPasswordToken": "b91ca91a6989edcab2ff9d3fea23baf6c593e01941597c15c982c5de8796220f"
+},
+{
+  "_id": {
+    "$oid": "6944b92adf0919ef07347caa"
+  },
+  "email": "hathang2004@gmail.com",
+  "password": "$2b$10$LvtSId7rexcbA8B4KXyN3.CVgomKGs1bnz3FQNFdLMH1SpBOXrK6a",
+  "fullName": "Phạm Hà Thắng",
+  "phone": "0376335815",
+  "avatar": "https://res.cloudinary.com/drgho551x/image/upload/v1775357546/furniture-shop/images/bqhyf8zmm8dre73epnds.png",
+  "role": "user",
+  "isDeleted": false,
+  "address": [],
+  "createdAt": {
+    "$date": "2025-12-19T02:32:10.283Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T02:52:28.785Z"
+  },
+  "__v": 2,
+  "resetPasswordExpire": {
+    "$date": "2025-12-23T05:56:26.012Z"
+  },
+  "resetPasswordToken": "b16e2a685e5a0f9be9657a5c02334758aaf1ce084fb452a38321b947dc5d56d4"
+},
+{
+  "_id": {
+    "$oid": "69d1db5c8bb555168c2fdc5b"
+  },
+  "email": "ml.seed.17753608598261@example.com",
+  "password": "$2b$10$ehWo/E5JlbKPVWyZU7SW5eATYTgwK.BG7yuE4mb23x3qebWYKVZRy",
+  "fullName": "ML Seed User 1",
+  "phone": "0919648616",
+  "avatar": "",
+  "role": "user",
+  "isDeleted": false,
+  "address": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-04-05T03:47:40.324Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:47:40.324Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d1db5c8bb555168c2fdc5c"
+  },
+  "email": "ml.seed.17753608599672@example.com",
+  "password": "$2b$10$UpF9wh8MGrkBu8FqN3a8K.pTMBGF7IfvyK7sAFbcmijw06Qqo6nc.",
+  "fullName": "ML Seed User 2",
+  "phone": "0955829196",
+  "avatar": "",
+  "role": "user",
+  "isDeleted": false,
+  "address": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-04-05T03:47:40.326Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:47:40.326Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d1db5c8bb555168c2fdc5d"
+  },
+  "email": "ml.seed.17753608600793@example.com",
+  "password": "$2b$10$OA9PjDHpgZQDynDLRAOza.Xerx2JkH6CSEyKxOUrtJd9mRl2OhEei",
+  "fullName": "ML Seed User 3",
+  "phone": "0993534829",
+  "avatar": "",
+  "role": "user",
+  "isDeleted": false,
+  "address": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-04-05T03:47:40.326Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:47:40.326Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69d1db5c8bb555168c2fdc5e"
+  },
+  "email": "ml.seed.17753608601944@example.com",
+  "password": "$2b$10$DIbnT2Tp930PzhfHnuWFIejLgdqswGZhKa4dzQGZp8NKmv6X0WZLG",
+  "fullName": "ML Seed User 4",
+  "phone": "0999880454",
+  "avatar": "",
+  "role": "user",
+  "isDeleted": false,
+  "address": [],
+  "__v": 0,
+  "createdAt": {
+    "$date": "2026-04-05T03:47:40.326Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:47:40.326Z"
+  }
+}]

@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "69329ddf63a83d44a1f5207c"
+  },
+  "name": "IKEA",
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1764925018/furniture-shop/images/hbgosjleysok7a4e9pwq.jpg",
+  "description": "Thương hiệu nội thất Thụy Điển",
+  "createdAt": {
+    "$date": "2025-12-05T08:54:55.673Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T08:54:55.673Z"
+  },
+  "slug": "ikea",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69329f0de26db821bb576a9c"
+  },
+  "name": "Hòa Phát",
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1764925183/furniture-shop/images/bwawlcmmor7utniwbvdi.png",
+  "description": "Thương hiệu quốc gia Việt Nam",
+  "createdAt": {
+    "$date": "2025-12-05T08:59:57.035Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-21T05:48:12.724Z"
+  },
+  "slug": "hoa-phat",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69329f50e26db821bb576aa3"
+  },
+  "name": "Ashley Furniture",
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1764925235/furniture-shop/images/pbbedlrda9fjafmujsrd.png",
+  "description": "Nội thất cao cấp từ Mỹ",
+  "createdAt": {
+    "$date": "2025-12-05T09:01:04.942Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T09:01:04.942Z"
+  },
+  "slug": "ashley-furniture",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69478a5dddae8440bc6440a7"
+  },
+  "name": "Homi",
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1766296176/furniture-shop/images/puqohu9y96tzauxnwfxb.png",
+  "description": "Thương hiệu Homi là thương hiệu sản xuất của cửa hàng.",
+  "createdAt": {
+    "$date": "2025-12-21T05:49:17.933Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-21T05:49:17.933Z"
+  },
+  "slug": "homi",
+  "__v": 0
+}]

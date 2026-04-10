@@ -1,0 +1,702 @@
+[{
+  "_id": {
+    "$oid": "6933adafb53918b85561127a"
+  },
+  "name": "Sofa Góc Lullaby",
+  "sku": "SF001",
+  "description": "Sofa góc Lullaby thiết kế hiện đại, bọc vải nỉ cao cấp, khung gỗ tự nhiên đã qua xử lý chống mối mọt.",
+  "price": 15000000,
+  "category": {
+    "$oid": "693296dbba0c79a52537afd1"
+  },
+  "brand": {
+    "$oid": "69329ddf63a83d44a1f5207c"
+  },
+  "stock": 9,
+  "images": [
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764945188/furniture-shop/images/crld8x0skjkryk3utbzh.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764945194/furniture-shop/images/thir6c7dvatimkqnijlx.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764945193/furniture-shop/images/gaixll4s5rqka0ex4qsb.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764945192/furniture-shop/images/m7l39wx1q4idwgpvs1ej.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764945195/furniture-shop/images/dvgz0mipbde7ysqhkahl.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764945192/furniture-shop/images/j12gd3c5lhj2sruxiifl.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764945193/furniture-shop/images/oetxh6nghkgplss3xhwa.jpg"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/drgho551x/image/upload/v1764994117/sofa_zcsmxr.glb",
+  "dimensions": {
+    "width": 160,
+    "height": 85,
+    "length": 200
+  },
+  "colors": [
+    "Be sáng",
+    "Kem"
+  ],
+  "materials": [
+    "Vải nỉ"
+  ],
+  "tags": [
+    "sofa",
+    "hiện đại",
+    "phòng khách"
+  ],
+  "averageRating": 2.5,
+  "totalReviews": 2,
+  "soldCount": 40,
+  "createdAt": {
+    "$date": "2025-12-06T04:14:39.727Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "sofa-goc-lullaby",
+  "isDeleted": false,
+  "__v": 0,
+  "isFeatured": false
+},
+{
+  "_id": {
+    "$oid": "6933c4202ea2861093a39b34"
+  },
+  "name": "Sofa Băng Da Bò Thật",
+  "sku": "SF002",
+  "description": "Sofa băng 3 chỗ ngồi bọc da bò Ý nhập khẩu, chân kim loại sơn tĩnh điện sang trọng.",
+  "price": 28500000,
+  "category": {
+    "$oid": "693296dbba0c79a52537afd1"
+  },
+  "brand": {
+    "$oid": "69329f50e26db821bb576aa3"
+  },
+  "stock": 0,
+  "images": [
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764999892/furniture-shop/images/kpuxgx6zl7rddbn6lum0.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764999899/furniture-shop/images/k7kotitqmbi0scts80sj.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764999898/furniture-shop/images/krsrkf3v14wbrcmyyax1.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764999901/furniture-shop/images/s3bn5gc864hqqgnkbnwg.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764999900/furniture-shop/images/vzq1ow2na7xkb7ifmttq.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1764999902/furniture-shop/images/iwztbh4t3tcsawdptfaw.jpg"
+  ],
+  "model3DUrl": " https://res.cloudinary.com/drgho551x/image/upload/v1765000058/low_poly_old_sofa_with_bake_normal_jh95kt.glb ",
+  "dimensions": {
+    "width": 90,
+    "height": 90,
+    "length": 220
+  },
+  "colors": [
+    "Nâu bò",
+    "Đen"
+  ],
+  "materials": [
+    "Da thật",
+    "Thép"
+  ],
+  "tags": [
+    "Sofa",
+    "Da thật",
+    "Sang trọng"
+  ],
+  "averageRating": 3,
+  "totalReviews": 2,
+  "soldCount": 41,
+  "createdAt": {
+    "$date": "2025-12-06T05:50:24.767Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "sofa-bang-da-bo-that",
+  "isDeleted": false,
+  "__v": 0,
+  "isFeatured": false
+},
+{
+  "_id": {
+    "$oid": "6933c69f2ea2861093a39b3d"
+  },
+  "name": "Sofa Giường Thông Minh",
+  "sku": "SF003",
+  "description": "Sofa có thể mở ra thành giường ngủ, giải pháp hoàn hảo cho căn hộ nhỏ.",
+  "price": 8500000,
+  "category": {
+    "$oid": "693296dbba0c79a52537afd1"
+  },
+  "brand": {
+    "$oid": "69329ddf63a83d44a1f5207c"
+  },
+  "stock": 12,
+  "images": [
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765001355/furniture-shop/images/p3rpwcd6q7zwugprljql.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765001366/furniture-shop/images/erlyg6uarr4bcmluqkzo.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765001368/furniture-shop/images/yhlnggfi9adpwymasf71.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765001369/furniture-shop/images/bvzgfdc7rlbda3s7ksax.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765001372/furniture-shop/images/mumtol6byflqwcsxufch.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765001372/furniture-shop/images/zreg7ygok4e1vivckt2m.jpg"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/drgho551x/image/upload/v1765000058/low_poly_old_sofa_with_bake_normal_jh95kt.glb ",
+  "dimensions": {
+    "width": 85,
+    "height": 80,
+    "length": 180
+  },
+  "colors": [
+    "Xanh Navy"
+  ],
+  "materials": [
+    "Vải bố",
+    "Khung gỗ"
+  ],
+  "tags": [
+    "Sofa bed",
+    "Thông minh",
+    "Nhỏ gọn"
+  ],
+  "averageRating": 3,
+  "totalReviews": 3,
+  "soldCount": 43,
+  "createdAt": {
+    "$date": "2025-12-06T06:01:03.379Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "sofa-giuong-thong-minh",
+  "isDeleted": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6933cd1a2ea2861093a39b50"
+  },
+  "name": "Sofa Đơn Thư Giãn",
+  "sku": "SF004",
+  "description": "Ghế sofa đơn kèm đôn gác chân, thiết kế ôm sát cơ thể giúp thư giãn tối đa.",
+  "price": 4200000,
+  "category": {
+    "$oid": "693296dbba0c79a52537afd1"
+  },
+  "brand": {
+    "$oid": "69329f50e26db821bb576aa3"
+  },
+  "stock": 18,
+  "images": [
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765002454/furniture-shop/images/gum1wzt2vn3k7ooy4koi.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765002452/furniture-shop/images/rtp0rww6hterspnolwgy.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765002452/furniture-shop/images/qhs076vmqmea3wzmco26.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765002452/furniture-shop/images/zftj6lpkysaqwakp9ydk.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765002453/furniture-shop/images/cqzmutmrub23riymuons.jpg"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/drgho551x/image/upload/v1766481350/compressed_mquuwi.glb",
+  "dimensions": {
+    "width": 80,
+    "height": 80,
+    "length": 100
+  },
+  "colors": [
+    "Be",
+    "Kem",
+    "Nâu"
+  ],
+  "materials": [
+    "Nhung",
+    "Da thật",
+    "Gỗ"
+  ],
+  "tags": [
+    "Sofa",
+    "Thư giãn",
+    "Đọc sách"
+  ],
+  "averageRating": 4,
+  "totalReviews": 1,
+  "soldCount": 55,
+  "createdAt": {
+    "$date": "2025-12-06T06:28:42.053Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "sofa-don-thu-gian",
+  "isDeleted": false,
+  "__v": 0,
+  "isFeatured": true
+},
+{
+  "_id": {
+    "$oid": "6933cfb22ea2861093a39b5b"
+  },
+  "name": "Bàn Trà Kính Tròn",
+  "sku": "BT001",
+  "description": "Bàn trà mặt kính cường lực, chân gỗ sang trọng.",
+  "price": 2500000,
+  "category": {
+    "$oid": "693296f6ba0c79a52537afd9"
+  },
+  "brand": {
+    "$oid": "69329f0de26db821bb576a9c"
+  },
+  "stock": 26,
+  "images": [
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765003147/furniture-shop/images/tc8rdxaov9yeymoeekwz.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765003147/furniture-shop/images/oz4vtunrar1rkkinsf6o.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765003149/furniture-shop/images/b1taczqa27rrrtegfdkm.jpg"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/drgho551x/image/upload/v1765003019/round_glass_table_meitn3.glb",
+  "dimensions": {
+    "width": 80,
+    "height": 40,
+    "length": 80
+  },
+  "colors": [
+    "Vàng",
+    "Nâu"
+  ],
+  "materials": [
+    "Kính cường lực",
+    "Gỗ"
+  ],
+  "tags": [
+    "Bàn trà",
+    "Hiện đại",
+    "Kính"
+  ],
+  "averageRating": 5,
+  "totalReviews": 1,
+  "soldCount": 47,
+  "createdAt": {
+    "$date": "2025-12-06T06:39:46.473Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "ban-tra-kinh-tron",
+  "isDeleted": false,
+  "__v": 2,
+  "isFeatured": true
+},
+{
+  "_id": {
+    "$oid": "6933d31d2ea2861093a39b66"
+  },
+  "name": "Giường Ngủ Gỗ Sồi",
+  "sku": "GN001",
+  "description": "Giường ngủ gỗ sồi phong cách Nhật Bản, thiết kế thấp sàn, tối giản.",
+  "price": 8900000,
+  "category": {
+    "$oid": "69329715ba0c79a52537afe1"
+  },
+  "brand": {
+    "$oid": "69329f50e26db821bb576aa3"
+  },
+  "stock": 27,
+  "images": [
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765004011/furniture-shop/images/xnjqsdkj69vdq6x1kvnm.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765004011/furniture-shop/images/iuwnufezs49s3udaj32t.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765004012/furniture-shop/images/ssh2ohjpr439brhdz8x0.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765004011/furniture-shop/images/yjstzwr2hxe6zrhjsb8b.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765004011/furniture-shop/images/sm76uapxefzmtgwfffqz.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765004011/furniture-shop/images/cxg1n6knrecfm0p6jxxx.jpg"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/drgho551x/image/upload/v1765003828/bed_pemyom.glb",
+  "dimensions": {
+    "width": 180,
+    "height": 30,
+    "length": 200
+  },
+  "colors": [
+    "Nâu",
+    "Cam"
+  ],
+  "materials": [
+    "Gỗ tự nhiên",
+    "Gỗ sồi Nga"
+  ],
+  "tags": [
+    "Giường",
+    "Phòng ngủ",
+    "Gỗ"
+  ],
+  "averageRating": 3,
+  "totalReviews": 2,
+  "soldCount": 60,
+  "createdAt": {
+    "$date": "2025-12-06T06:54:21.449Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "giuong-ngu-go-soi",
+  "isDeleted": false,
+  "__v": 0,
+  "isFeatured": true
+},
+{
+  "_id": {
+    "$oid": "6933d83cf17e1b6d5ec15b0b"
+  },
+  "name": "Bộ Bàn Ăn 6 Ghế",
+  "sku": "BA001",
+  "description": "Bộ bàn ăn lớn cho gia đình, ghế ngồi êm ái, chắc chắn.",
+  "price": 8900000,
+  "category": {
+    "$oid": "69329745ba0c79a52537afe9"
+  },
+  "brand": {
+    "$oid": "69329f50e26db821bb576aa3"
+  },
+  "stock": 11,
+  "images": [
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765005255/furniture-shop/images/rwh9exvb3d9tcxu5fzez.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765005254/furniture-shop/images/yplozrb7bsypwxzve5yg.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1765005252/furniture-shop/images/lzb4bwjjjo0virw2bhqz.jpg"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/drgho551x/image/upload/v1766480505/compressed_cssttb.glb",
+  "dimensions": {
+    "width": 80,
+    "height": 75,
+    "length": 160
+  },
+  "colors": [
+    "Nâu",
+    "Đen"
+  ],
+  "materials": [
+    "Gỗ tự nhiên",
+    "Sắt"
+  ],
+  "tags": [
+    "Bộ bàn ăn",
+    "Gia đình",
+    "Bàn ăn lớn"
+  ],
+  "averageRating": 2.5,
+  "totalReviews": 2,
+  "soldCount": 46,
+  "createdAt": {
+    "$date": "2025-12-06T07:16:12.751Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "bo-ban-an-6-ghe",
+  "isDeleted": false,
+  "__v": 0,
+  "isFeatured": true
+},
+{
+  "_id": {
+    "$oid": "6948c80e82c30577b2147244"
+  },
+  "name": "Ghế Giám Đốc",
+  "sku": "GH001",
+  "description": "Mẫu ghế giám đốc bọc Da thật hoặc Da công nghiệp, PVC cao cấp, tay vịn và chân mẫu ghế giám đốc này được làm bằng gỗ tự nhiên có độ bền cao, chịu lực tốt. Ghế được trang bị 5 bánh xe ngay dưới các chân sao, giúp di chuyển dễ dàng.",
+  "price": 4000000,
+  "category": {
+    "$oid": "694b5974a2fa3f24b36679e2"
+  },
+  "brand": {
+    "$oid": "69329f0de26db821bb576a9c"
+  },
+  "stock": 10,
+  "images": [
+    "https://res.cloudinary.com/drgho551x/image/upload/v1766378253/Gemini_Generated_Image_y9ade9y9ade9y9ad_pchlqj.png",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766208759/k0pvfrf0hlywcg6ynwew.jpg",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766208760/vr3esstyooeapxuxh3xw.jpg",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1766378246/ht4eoswswhzyeivcsmka_opwm3m.jpg"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/drgho551x/image/upload/v1766378544/furniture-shop/models/tqxw9ynuqsywksfv6b6w.glb",
+  "dimensions": {
+    "width": 65,
+    "height": 120,
+    "length": 75
+  },
+  "colors": [
+    "Đen",
+    "Nâu"
+  ],
+  "materials": [
+    "Da công nghiệp",
+    "PVC cao cấp",
+    "Gỗ sơn"
+  ],
+  "tags": [
+    "Ghế giám đốc",
+    "sang trọng",
+    "văn phòng"
+  ],
+  "averageRating": 4,
+  "totalReviews": 1,
+  "soldCount": 51,
+  "isFeatured": false,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2025-12-22T04:24:46.277Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "ghe-giam-djoc",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694b5499d8b937e516be976d"
+  },
+  "name": "Ghế họp",
+  "sku": "GH002",
+  "description": "Ghế họp lãnh đạo cao cấp chân quỳ, thiết kế để mang lại phong thái quyền lực và thoải mái. Đệm tựa mút bọc Da thật, Da công nghiệp, hoặc PVC (tùy chọn). Tay ghế bằng gỗ sơn kết hợp thép mạ độc đáo. Khung chân quỳ làm bằng thép mạ sáng bóng, vững chắc, không rung lắc",
+  "price": 2000000,
+  "category": {
+    "$oid": "694b5974a2fa3f24b36679e2"
+  },
+  "brand": {
+    "$oid": "69329f0de26db821bb576a9c"
+  },
+  "stock": 15,
+  "images": [
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766387049/xav2hemslhat2tg3mc0g.png",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766209087/dnciisahf7urvzmoklgk.jpg",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766209088/pbyff4ozovofrjteg6lb.jpg",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766209090/afobmlrlorp5io2amp4e.jpg"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766385562/l7xhznrmemqheaxns5ma.glb",
+  "dimensions": {
+    "width": 65,
+    "height": 113,
+    "length": 70
+  },
+  "colors": [
+    "Đen"
+  ],
+  "materials": [
+    "Da thật",
+    "Da công nghiệp",
+    "PVC"
+  ],
+  "tags": [
+    "Ghế họp",
+    "Ghế da",
+    "Sang trọng"
+  ],
+  "averageRating": 3,
+  "totalReviews": 3,
+  "soldCount": 30,
+  "isFeatured": false,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2025-12-24T02:48:57.099Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "ghe-hop",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694b56e3e66a5144f28b9e16"
+  },
+  "name": "Ghế Xoay Công Thái Học",
+  "sku": "GH003",
+  "description": "Ghế xoay trưởng phòng lưng trung, đệm tựa liền khối bọc vải nỉ tạo sự thoải mái êm ái. Tay và chân ghế bằng nhựa. Chân có bánh xe di chuyển và bát có chức năng điều chỉnh độ cao cần hơi tiện lợi. Thường được sử dụng cho trưởng phòng và cấp quản lý",
+  "price": 1500000,
+  "category": {
+    "$oid": "694b5974a2fa3f24b36679e2"
+  },
+  "brand": {
+    "$oid": "69329f0de26db821bb576a9c"
+  },
+  "stock": 15,
+  "images": [
+    "https://res.cloudinary.com/drgho551x/image/upload/v1766548909/furniture-shop/images/urrypjtd0vqbzeq9h1r5.jpg",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766209506/oopiz6gfwzqtboore7qo.jpg",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766209507/fq7uco99fof8wiosr9dt.jpg",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766209508/ncdf3qetiqc5m79yelmm.jpg"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766386051/esljz2lsoxaqqsithu04.glb",
+  "dimensions": {
+    "width": 60,
+    "height": 100,
+    "length": 58
+  },
+  "colors": [
+    "Đen",
+    "Đỏ"
+  ],
+  "materials": [
+    "Vải nỉ",
+    "Nhựa"
+  ],
+  "tags": [
+    "Ghế trưởng phòng",
+    "Ghế xoay"
+  ],
+  "averageRating": 3,
+  "totalReviews": 1,
+  "soldCount": 55,
+  "isFeatured": false,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2025-12-24T02:58:43.468Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "ghe-xoay-cong-thai-hoc",
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "694b5c0447135ae054ace199"
+  },
+  "name": "Ghế Điểm Nhấn Larbell",
+  "sku": "GE001",
+  "description": "Ghế kết hợp giữa phong cách cao cấp và sự thư giãn. Ghế bọc vải polyester giả lông cừu (faux shearling) ấm cúng, có thiết kế lưng cánh với nút trang trí và tay ghế dốc ấn tượng. Chân ghế gỗ hoàn thiện màu nâu.",
+  "price": 10000000,
+  "category": {
+    "$oid": "693296dbba0c79a52537afd1"
+  },
+  "brand": {
+    "$oid": "69329f50e26db821bb576aa3"
+  },
+  "stock": 10,
+  "images": [
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766389423/ktjud9f70zvfndun2bvg.png",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766210465/vv2xtl3ridqsyazykkei.webp",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766210466/d6gekm6dw6dudhqstqjy.webp",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766210467/tmth0ep2oztgwfklani0.webp"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/drgho551x/image/upload/v1766547107/furniture-shop/models/hcoygtt5kfvqppsjpqw2.glb",
+  "dimensions": {
+    "width": 90,
+    "height": 140,
+    "length": 80
+  },
+  "colors": [
+    "Be",
+    "Nâu nhạt"
+  ],
+  "materials": [
+    "Vải polyester giả lông cừu",
+    "Gỗ"
+  ],
+  "tags": [
+    "Sofa điểm nhấn",
+    "Phòng Khách",
+    "Sofa"
+  ],
+  "averageRating": 0,
+  "totalReviews": 0,
+  "soldCount": 55,
+  "isFeatured": false,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2025-12-24T03:20:36.448Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "ghe-djiem-nhan-larbell",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694b5f9b3ca8b2386b70c3bb"
+  },
+  "name": "Bàn Ceilby",
+  "sku": "BD001",
+  "description": "Bàn Ceilby phong cách hiện đại, được làm từ gỗ nguyên khối với chân đế có rãnh ấn tượng. Bề mặt hoàn thiện màu đen, có hiệu ứng chải xước. Sản phẩm có thể được sử dụng riêng lẻ hoặc kết hợp với các sản phẩm khác trong bộ sưu tập",
+  "price": 3500000,
+  "category": {
+    "$oid": "69328dd8ed938f60e00a086c"
+  },
+  "brand": {
+    "$oid": "69329f50e26db821bb576aa3"
+  },
+  "stock": 20,
+  "images": [
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766389424/miletebcfmduie0qxvoe.png",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766210653/jemny9gll2ytpq0ju7al.webp",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766210654/hgmxgqzxcyhsmm2wadvo.webp"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/drgho551x/image/upload/v1766547449/furniture-shop/models/iuxkpagf1bctkni11ivm.glb",
+  "dimensions": {
+    "width": 14,
+    "height": 21,
+    "length": 14
+  },
+  "colors": [
+    "Đen"
+  ],
+  "materials": [
+    "Gỗ nguyên khối"
+  ],
+  "tags": [
+    "Bàn",
+    "Hiện đại",
+    "Gỗ nguyên khối"
+  ],
+  "averageRating": 0,
+  "totalReviews": 0,
+  "soldCount": 45,
+  "isFeatured": false,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2025-12-24T03:35:55.275Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T03:51:45.179Z"
+  },
+  "slug": "ban-ceilby",
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "694b645f75a1381c862ecf80"
+  },
+  "name": "Bàn Gỗ Điểm Nhấn",
+  "sku": "BG002",
+  "description": "Bàn gỗ điểm nhấn phong cách đương đại , được làm từ gỗ nguyên khối. Thiết kế nổi bật với chân đế có rãnh. Sản phẩm có vẻ đẹp tự nhiên, có thể sử dụng riêng lẻ hoặc kết hợp với các sản phẩm khác trong bộ sưu tập. Bề mặt có hiệu ứng chải xước.",
+  "price": 500000,
+  "category": {
+    "$oid": "69328dd8ed938f60e00a086c"
+  },
+  "brand": {
+    "$oid": "69329f50e26db821bb576aa3"
+  },
+  "stock": 9,
+  "images": [
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766389422/a31cyyphoinne309llgk.png",
+    "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766210831/b18s5rll1ejpogfs4ll0.webp",
+    "https://res.cloudinary.com/drgho551x/image/upload/v1766548740/furniture-shop/images/jztplxt816vetsipts0m.png"
+  ],
+  "model3DUrl": "https://res.cloudinary.com/drgho551x/image/upload/v1766548769/furniture-shop/models/l9ytpkh7rfigarbaaajp.glb",
+  "dimensions": {
+    "width": 20,
+    "height": 17,
+    "length": 20
+  },
+  "colors": [
+    "Màu gỗ tự nhiên"
+  ],
+  "materials": [
+    "Gỗ nguyên khối"
+  ],
+  "tags": [
+    "Gỗ nguyên khối",
+    "Bàn điểm nhấn"
+  ],
+  "averageRating": 4,
+  "totalReviews": 2,
+  "soldCount": 39,
+  "isFeatured": false,
+  "isDeleted": false,
+  "createdAt": {
+    "$date": "2025-12-24T03:56:15.483Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T07:19:06.553Z"
+  },
+  "slug": "ban-go-djiem-nhan",
+  "__v": 1
+}]

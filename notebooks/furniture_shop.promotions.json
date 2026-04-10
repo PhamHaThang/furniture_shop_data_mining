@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "6932a931d502d2f1a5bb0ae1"
+  },
+  "code": "WELCOME",
+  "description": "Giảm 100k cho đơn hàng tối thiểu 500k",
+  "discountType": "fixed",
+  "discountValue": 100000,
+  "startDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2026-12-10T00:00:00.000Z"
+  },
+  "minSpend": 500000,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-12-05T09:43:13.045Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-21T01:21:48.112Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6932a9a9d502d2f1a5bb0ae6"
+  },
+  "code": "SUMMER10",
+  "description": "Giảm 10% cho đơn hàng tối thiểu 1 triệu",
+  "discountType": "percentage",
+  "discountValue": 10,
+  "startDate": {
+    "$date": "2025-12-05T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2026-12-10T00:00:00.000Z"
+  },
+  "minSpend": 1000000,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-12-05T09:45:13.127Z"
+  },
+  "updatedAt": {
+    "$date": "2026-04-05T07:24:04.810Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69474b22ddae8440bc643d88"
+  },
+  "code": "DISCOUNT20%",
+  "description": "Giảm 20% cho đơn hàng tối thiểu 5 triệu",
+  "discountType": "percentage",
+  "discountValue": 20,
+  "startDate": {
+    "$date": "2025-12-21T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2026-01-17T00:00:00.000Z"
+  },
+  "minSpend": 5000000,
+  "isActive": true,
+  "createdAt": {
+    "$date": "2025-12-21T01:19:30.852Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-21T05:58:17.595Z"
+  },
+  "__v": 0
+}]

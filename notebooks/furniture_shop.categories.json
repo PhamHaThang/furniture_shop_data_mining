@@ -1,0 +1,163 @@
+[{
+  "_id": {
+    "$oid": "69328dd8ed938f60e00a086c"
+  },
+  "name": "Phòng khách",
+  "description": "Nội thất sang trọng cho phòng khách",
+  "parentCategory": null,
+  "createdAt": {
+    "$date": "2025-12-05T07:46:32.161Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T07:46:32.161Z"
+  },
+  "slug": "phong-khach",
+  "__v": 0,
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1765035055/living_xhnrjj.jpg"
+},
+{
+  "_id": {
+    "$oid": "69328eb5ed938f60e00a0879"
+  },
+  "name": "Phòng ngủ",
+  "description": "Không gian ấm cúng cho giấc ngủ",
+  "parentCategory": null,
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1765035054/bedroom_fef1kq.jpg",
+  "createdAt": {
+    "$date": "2025-12-05T07:50:13.855Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T07:50:13.855Z"
+  },
+  "slug": "phong-ngu",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69328ef0ed938f60e00a087f"
+  },
+  "name": "Phòng bếp",
+  "description": "Tiện nghi cho gian bếp hiện đại",
+  "parentCategory": null,
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1765035055/kitchen_aynmkl.jpg",
+  "createdAt": {
+    "$date": "2025-12-05T07:51:12.219Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T07:51:12.219Z"
+  },
+  "slug": "phong-bep",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69328effed938f60e00a0885"
+  },
+  "name": "Văn phòng",
+  "description": "Bàn ghế làm việc chuyên nghiệp",
+  "parentCategory": null,
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1765035055/office_mofztf.jpg",
+  "createdAt": {
+    "$date": "2025-12-05T07:51:27.950Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T07:51:27.950Z"
+  },
+  "slug": "van-phong",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "693296dbba0c79a52537afd1"
+  },
+  "name": "Sofa",
+  "description": "Các loại ghế Sofa cao cấp",
+  "parentCategory": {
+    "$oid": "69328dd8ed938f60e00a086c"
+  },
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1764945194/furniture-shop/images/thir6c7dvatimkqnijlx.jpg",
+  "createdAt": {
+    "$date": "2025-12-05T08:24:59.874Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T08:24:59.874Z"
+  },
+  "slug": "sofa",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "693296f6ba0c79a52537afd9"
+  },
+  "name": "Bàn trà",
+  "description": "Bàn trà, bàn cafe",
+  "parentCategory": {
+    "$oid": "69328dd8ed938f60e00a086c"
+  },
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1765003147/furniture-shop/images/tc8rdxaov9yeymoeekwz.jpg",
+  "createdAt": {
+    "$date": "2025-12-05T08:25:26.557Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T08:25:26.557Z"
+  },
+  "slug": "ban-tra",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69329715ba0c79a52537afe1"
+  },
+  "name": "Giường ngủ",
+  "description": "Giường ngủ các loại",
+  "parentCategory": {
+    "$oid": "69328eb5ed938f60e00a0879"
+  },
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1765004011/furniture-shop/images/xnjqsdkj69vdq6x1kvnm.jpg",
+  "createdAt": {
+    "$date": "2025-12-05T08:25:57.842Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-05T08:25:57.842Z"
+  },
+  "slug": "giuong-ngu",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "69329745ba0c79a52537afe9"
+  },
+  "name": "Bộ bàn ăn",
+  "description": "Bộ bàn ghế ăn gia đình",
+  "parentCategory": {
+    "$oid": "69328ef0ed938f60e00a087f"
+  },
+  "image": "https://res.cloudinary.com/drgho551x/image/upload/v1765005255/furniture-shop/images/rwh9exvb3d9tcxu5fzez.jpg",
+  "createdAt": {
+    "$date": "2025-12-05T08:26:45.086Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-21T14:14:41.881Z"
+  },
+  "slug": "bo-ban-an",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "694b5974a2fa3f24b36679e2"
+  },
+  "name": "Ghế văn phòng",
+  "description": "Các loại ghế dành cho văn phòng",
+  "image": "https://res.cloudinary.com/dw8ek1lok/image/upload/v1766387049/xav2hemslhat2tg3mc0g.png",
+  "parentCategory": {
+    "$oid": "69328effed938f60e00a0885"
+  },
+  "createdAt": {
+    "$date": "2025-12-24T03:09:40.588Z"
+  },
+  "updatedAt": {
+    "$date": "2025-12-24T03:16:36.489Z"
+  },
+  "slug": "ghe-van-phong",
+  "__v": 0
+}]
