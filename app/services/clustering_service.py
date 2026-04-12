@@ -6,6 +6,8 @@ from typing import Any, Dict, List
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import silhouette_score
+import numpy as np
 
 from app.core.schemas import MLRequest
 from app.services.data_prep_service import products_to_df
@@ -290,16 +292,43 @@ def kmeans_clustering(request:MLRequest, cluster_type: str = "products") ->Dict[
         names_key = "name"
 
     n_samples = x.shape[0]
-    # Logic để xác định số lượng cụm phù hợp: ít nhất 2 cụm và không vượt quá số lượng mẫu
-    n_clusters = max(2, min(request.clusters, n_samples)) if n_samples > 1 else 1
+
+    if n_samples > 0:
+        # Clip outliers
+        for col_idx in range(x.shape[1]):
+            q1 = np.percentile(x[:, col_idx], 25)
+            q3 = np.percentile(x[:, col_idx], 75)
+            iqr = q3 - q1
+            lower = q1 - 1.5 * iqr
+            upper = q3 + 1.5 * iqr
+            x[:, col_idx] = np.clip(x[:, col_idx], lower, upper)
 
     # Chuẩn hóa dữ liệu trước khi phân cụm
     scaler = StandardScaler()
     x_scaled = scaler.fit_transform(x)
 
-    # Áp dụng K-Means để phân cụm
-    model = KMeans(n_clusters=n_clusters, random_state=42, n_init=20)
-    cluster_labels = model.fit_predict(x_scaled)
+    best_k = max(2, min(request.clusters, n_samples)) if n_samples > 1 else 1
+    best_labels = None
+    best_score = -1
+
+    if n_samples > 2:
+        max_k = min(request.clusters + 2, n_samples - 1)
+        for k in range(2, max_k + 1):
+            model = KMeans(n_clusters=k, random_state=42, n_init=10)
+            labels = model.fit_predict(x_scaled)
+            # silhouette_score returns value between -1 and 1
+            score = silhouette_score(x_scaled, labels)
+            if score > best_score:
+                best_score = score
+                best_k = k
+                best_labels = labels
+
+    if best_labels is None:
+         model = KMeans(n_clusters=best_k, random_state=42, n_init=10)
+         best_labels = model.fit_predict(x_scaled)
+
+    n_clusters = best_k
+    cluster_labels = best_labels
     cluster_summaries = _build_cluster_summaries(
         df=df,
         cluster_labels=cluster_labels,

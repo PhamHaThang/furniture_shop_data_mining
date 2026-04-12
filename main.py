@@ -1,2 +1,2 @@
-# uvicorn main:app --host --port 8000 --reload
+# uvicorn main:app --host 127.0.0.1 --port 8001 --reload
 from app.main import app

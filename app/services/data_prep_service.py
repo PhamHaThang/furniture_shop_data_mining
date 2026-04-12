@@ -9,6 +9,8 @@ from collections import defaultdict
 from typing import Any, Dict, List
 
 import pandas as pd
+import math
+from datetime import datetime, timezone
 
 from app.utils.normalizers import join_tokens, to_id
 
@@ -59,6 +61,23 @@ def products_to_df(products:List[Dict[str, Any]]) ->pd.DataFrame:
         )
     return pd.DataFrame(rows)
 
+def _time_decay(created_at: Any, half_life_days: int = 90) -> float:
+    if not created_at:
+        return 1.0
+    try:
+        dt_str = str(created_at).replace("Z", "+00:00")
+        dt = datetime.fromisoformat(dt_str)
+        if dt.tzinfo is None:
+             dt = dt.replace(tzinfo=timezone.utc)
+        
+        days_ago = (datetime.now(timezone.utc) - dt).days
+        if days_ago < 0: 
+             days_ago = 0
+             
+        return math.exp(-0.693 * days_ago / half_life_days)
+    except Exception:
+        return 1.0
+
 def interactions_to_df(
     reviews:List[Dict[str, Any]],
     orders:List[Dict[str, Any]],
@@ -74,16 +93,18 @@ def interactions_to_df(
         user_id = to_id(review.get("user"))
         product_id = to_id(review.get("product"))
         rating = float(review.get("rating") or 0)
+        decay = _time_decay(review.get("createdAt"))
         if user_id and product_id:
-            signals[(user_id, product_id)] += rating
+            signals[(user_id, product_id)] += rating * decay
 
     for order in orders:
         user_id = to_id(order.get("user"))
+        decay = _time_decay(order.get("createdAt"))
         for item in order.get("items") or []:
             product_id = to_id(item.get("product"))
             quantity = float(item.get("quantity") or 1)
             if user_id and product_id:
-                signals[(user_id, product_id)] += quantity * 1.5
+                signals[(user_id, product_id)] += quantity * 1.5 * decay
     
     rows = [
         {"user_id": user_id, "product_id": product_id, "score": score}
